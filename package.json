@@ -1,0 +1,18 @@
+{
+  "name": "opencv-rec-facial",
+  "version": "1.0.0",
+  "description": "Reconhecimento Facial com Opencv e NodeRED",
+  "main": "id-foto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Poliana N Ferreira",
+  "license": "ISC",
+  "node-red" : {
+    "nodes": {
+        "id-foto": "id-foto.js",
+        "dataset":"dataset.js",
+        "treino":"treino.js"
+    }
+}
+}

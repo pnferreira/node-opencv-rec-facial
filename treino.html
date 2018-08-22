@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    RED.nodes.registerType('treino',{
+        category: 'function',
+        color: '#00aaff',
+        defaults: {
+            name: {value:""},
+            func: {value: "\nreturn msg"},
+            outputs: {value: 0}  // Ofuscated way to persist the number of outputs of the node
+        },
+        inputs:1,
+        outputs:0,
+        icon: "face.png",
+        label: function() {
+            return this.name||"treino";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="treino">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="treino">
+    <p>Um node que utiliza do dataset previamente captado para treinar um algoritmo LBPH e gerar um arquivo trainner.yml</p>
+</script>

@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('id-foto',{
+        category: 'function',
+        color: '#aaff00',
+        defaults: {
+            name: {value:""},
+            func: {value: "\nreturn msg"},
+            nomeid: {value: "Poliana"},
+            outputs: {value: 1}  // Ofuscated way to persist the number of outputs of the node
+        },
+        inputs:1,
+        outputs:1,
+        icon: "face.png",
+        label: function() {
+            return this.name||"id-foto";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="id-foto">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        <label for="node-input-nomeid"><i class="icon-tag"></i> Nome p Id</label>
+        <input type="text" id="node-input-nomeid" placeholder="Poliana">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="id-foto">
+    <p>Um node que faz uso do arquivo gerado pelo node de treino para tirar uma foto, analisa-la e dizer se a pessoa foi identificada ou não</p>
+</script>

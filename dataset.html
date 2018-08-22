@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('dataset',{
+        category: 'function',
+        color: '#ff00aa',
+        defaults: {
+            name: {value:""},
+            func: {value: "\nreturn msg"},
+            num: {value: 1},
+            outputs: {value: 0}  // Ofuscated way to persist the number of outputs of the node
+        },
+        inputs:1,
+        outputs:0,
+        icon: "face.png",
+        label: function() {
+            return this.name||"dataset";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="dataset">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        <label for="node-input-num"><i class="icon-tag"></i>Numero</label>
+        <input type="text" id="node-input-num" placeholder="Numero">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="dataset">
+    <p>Um node para gerar um dataset de imagens de uma pessoa</p>
+</script>
